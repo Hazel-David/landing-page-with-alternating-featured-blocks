@@ -1,0 +1,131 @@
+:root{
+--Very-Pale-Cyan: hsl(193, 100%, 96%);
+--Very-Dark-Cyan: hsl(192, 100%, 9%);
+--Grayish-Blue: hsl(208, 11%, 55%);
+--Pink: hsl(322, 100%, 66%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.logo img{
+    max-width: 210px;
+    height: auto;
+    
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+header{
+    background-image: url(images/bg-hero-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--Very-Pale-Cyan);
+}
+.hero-text{
+    padding-top: 10%;
+}
+#card{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+footer{
+    background-color: var(--Very-Dark-Cyan);
+}
+
+.row div>p{
+    color: var(--Grayish-Blue);
+}
+h4,h1{
+    color: var(--Very-Dark-Cyan);
+}
+ul{
+    list-style: none;
+}
+
+
+/* 
+    REMOVING DEFAULT STYLING OF THE FOOTER QUICK LINKS
+    AND ADJUSTING THE HOVER STATE
+*/
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+ul li a:hover{
+    text-decoration: underline;
+}
+
+
+ul li a i{
+    color: white;
+    border: 2px solid white;
+    padding: 1rem;
+    border-radius: 50%;
+    height: -21px;
+    width: 48px;
+    align-items: center;
+    transition: all .5s ease-in-out;
+}
+ul li a i:hover{
+    color: var(--Pink);
+    border: 2px solid var(--Pink);
+}
+footer>.footer-overlay{
+    position: absolute;
+    top: -15%;
+    left: 25%;
+}
+
+/* 
+    ADJUSTING THE HOVER STATES OF THE BUTTONS ON THE PAGE
+*/
+footer .container>div button,#free,#try{
+    transition: all .5s ease-in-out;
+}
+footer .container>div button:hover,#free:hover,#try:hover{
+    opacity: .7;
+}
+
+
+@media screen and (max-width: 800px){
+    .hero-text{
+        padding-top: 5%;
+    }
+}
+
+/* 
+    ADJUSTING THE WIDTH OF THE LOGO ON THE NAVIGATION BAR
+    AT BREAKPOINTS 768px AND 576px RESPECTIVELY
+*/
+@media screen and (max-width: 768px) { 
+    .logo img {
+        max-width: 180px; 
+    }
+}
+
+@media screen and (max-width: 576px) { 
+    .logo img {
+        max-width: 150px; 
+    }
+}
+
+@media screen and (max-width: 350px){
+    .logo img{
+        max-width: 100px;
+    }
+}
+
+
+/* 
+    Adjusting the width and left positioning
+    of the footer overlay to screen size
+*/
+@media screen and (max-width: 576px) {
+    footer>.footer-overlay{
+        width: 90% !important;
+        position: absolute;
+        left: 5%;
+    }
+}
